@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image.prod.js"></script>
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
+    </head>
+    <script>
+        /*function OnLoaded(){
+        console.log("loaded!");
+        }*/
+        function OnLoaded(){
+        /*var models = document.getElementsByClassName("model");
+        for (var i = 0; i < models.length; ++i) {
+            models[i].addEventListener("object3dset", ()=>{console.log("Hello!");})
+            models[i].addEventListener("loaded", ()=>{console.log("Hello!");})
+        }*/
+        
+            document.getElementById("_build").addEventListener("loaded", function() { console.log("Hello!"); });
+        setTimeout(OnLoaded, 500)
+        }
+        setTimeout(OnLoaded, 500);
+        
+        
+    </script>
+    <style>
+        .screen{
+            position: relative;
+            top: 0%;
+            left: 0%;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(200,0,200,1);
+        }
+        .butts{
+            position: relative;
+            top: 70%;
+            margin: auto;
+            height: 30%;
+            width:80%;
+            background-color: rgba(0,0,0,0);
+            display: none;
+        }
+        .butt{
+            position: relative;
+            margin: auto;
+            height: 18%;
+            margin-bottom: 2%;
+            width:90%;
+            color: rgba(255,255,255,1);
+            background-color: rgba(200,200,200,0.8);
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+    <body>
+        <div class="screen">
+            
+        </div>
+        <div class="butts">
+            <div class="butt">butt1</div>
+            <div class="butt">butt2</div>
+            <div class="butt">butt3</div>
+            <div class="butt">butt4</div>
+            <div class="butt">butt5</div>
+        </div>
+    <a-scene mindar-image="imageTargetSrc: marx.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+        <a-assets>
+            <a-asset-item id="m_t_0" src="https://karasevv.com/testtin/ar_stankin/models/macine_tool.glb"></a-asset-item>
+            <a-asset-item id="m_t_1" src="https://karasevv.com/testtin/ar_stankin/models/mt_1.glb"></a-asset-item>
+            <a-asset-item id="m_t_2" src="https://karasevv.com/testtin/ar_stankin/models/mt_0.glb"></a-asset-item>
+            <a-asset-item id="build" src="https://karasevv.com/testtin/ar_stankin/models/stanok.glb"></a-asset-item>
+            <a-asset-item id="logo" src="https://karasevv.com/testtin/ar_stankin/models/stankin_logo.glb"></a-asset-item>
+        </a-assets>
+        
+        <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+        
+        <a-entity mindar-image-target="targetIndex: 0">
+            <a-gltf-model rotation="90 0 0 " position="0 0 0.1" scale="0.3 0.3 0.3" src="#m_t_0">
+        </a-entity>
+        <a-entity mindar-image-target="targetIndex: 1">
+            <a-gltf-model rotation="90 0 0 " position="0 0 0.1" scale="0.3 0.3 0.3" src="#m_t_1">
+        </a-entity>
+        <a-entity mindar-image-target="targetIndex: 2">
+            <a-gltf-model rotation="90 0 0 " position="0 0 0.1" scale="0.3 0.3 0.3" src="#m_t_2">
+        </a-entity>
+        <a-entity mindar-image-target="targetIndex: 3">
+            <a-gltf-model id="_build" rotation="90 0 0 " position="0 0 0.1" scale="0.3 0.3 0.3" src="#build">
+        </a-entity>
+        <a-entity mindar-image-target="targetIndex: 4">
+            <a-gltf-model rotation="90 0 0 " position="-1.2 0 0.1" scale="0.2 0.2 0.2" src="#logo">
+        </a-entity>
+    </a-scene>
+    </body>
+</html>

@@ -1,0 +1,369 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <title>Тест</title>
+    </head>
+        <script>
+        let _score = 54;
+        function SetPart(_el, _id){
+            $.ajax({
+            	url: "https://karasevv.com/hacaton/data_write.php",
+            	method: 'post',
+            	dataType: 'html',
+            	data: {el: _el,id: _id},
+            	success: function(data){
+            		//alert(data);
+            	}
+            });
+        }
+        function OnLoad(){
+            score.innerHTML="Оценка: "+_score;
+            q0.style.display='block';
+            q1.style.display='none';
+            q2.style.display='none';
+            q3.style.display='none';
+            q4.style.display='none';
+            q5.style.display='none';
+            q6.style.display='none';
+            q7.style.display='none';
+            var url_string = window.location.href; //window.location.href
+            var url = new URL(url_string);
+            var c = url.searchParams.get("a");
+            if(c==0){
+                ToTask1();
+            }
+            if(c==1){
+                ToTask2();
+            }
+            if(c==2){
+                ToTask3();
+            }
+            if(c==3){
+                ToTask4();
+            }
+            if(c==4){
+                ToTask5();
+            }
+            if(c==5){
+                ToTask6();
+            }
+            if(c==6){
+                ToTask7();
+            }
+            if(c==7){
+                ToTask8();
+            }
+            //console.log(c);
+        }
+        function ToTask1(){
+            q0.style.display='none';
+            q1.style.display='block';
+            q2.style.display='none';
+            q3.style.display='none';
+            q4.style.display='none';
+            q5.style.display='none';
+            q6.style.display='none';
+            q7.style.display='none';
+            document.title = "Вопрос №1";
+        }
+        function ToSpindle(){
+            alert("Верно 😃");
+            window.open("https://karasevv.com/hacaton/csenes/spindel.html");
+            window.close();
+        }
+        function ToTask2(){
+            q0.style.display='none';
+            q1.style.display='none';
+            q2.style.display='block';
+            q3.style.display='none';
+            q4.style.display='none';
+            q5.style.display='none';
+            q6.style.display='none';
+            q7.style.display='none';
+            document.title = "Вопрос №2";
+            SetPart(0, 1);
+        }
+        function ToDetal(){
+            alert("Умница 😁");
+            window.open("https://karasevv.com/hacaton/csenes/detal.html");
+            window.close();
+        }
+        function ToTask3(){
+            q0.style.display='none';
+            q1.style.display='none';
+            q2.style.display='none';
+            q3.style.display='block';
+            q4.style.display='none';
+            q5.style.display='none';
+            q6.style.display='none';
+            q7.style.display='none';
+            document.title = "Вопрос №3";
+            SetPart(1, 1);
+        }
+        function ToDirect_x(){
+            alert("Мое почтение 🙂");
+            window.open("https://karasevv.com/hacaton/csenes/direct_x.html");
+            window.close();
+        }
+        function ToTask4(){
+            q0.style.display='none';
+            q1.style.display='none';
+            q2.style.display='none';
+            q3.style.display='none';
+            q4.style.display='block';
+            q5.style.display='none';
+            q6.style.display='none';
+            q7.style.display='none';
+            document.title = "Вопрос №4";
+            SetPart(2, 1);
+        }
+        function ToReceiver(){
+            alert("Я вами горжусь 🤩");
+            window.open("https://karasevv.com/hacaton/csenes/receiver.html");
+            window.close();
+        }
+        function ToTask5(){
+            q0.style.display='none';
+            q1.style.display='none';
+            q2.style.display='none';
+            q3.style.display='none';
+            q4.style.display='none';
+            q5.style.display='block';
+            q6.style.display='none';
+            q7.style.display='none';
+            document.title = "Вопрос №5";
+            SetPart(3, 1);
+        }
+        function ToStand(){
+            alert("Так держать 😘");
+            window.open("https://karasevv.com/hacaton/csenes/stand.html");
+            window.close();
+        }
+        function ToTask6(){
+            q0.style.display='none';
+            q1.style.display='none';
+            q2.style.display='none';
+            q3.style.display='none';
+            q4.style.display='none';
+            q5.style.display='block';
+            q6.style.display='none';
+            q7.style.display='none';
+            document.title = "Вопрос №6";
+            SetPart(4, 1);
+        }
+        function ToTask7(){
+            q0.style.display='none';
+            q1.style.display='none';
+            q2.style.display='none';
+            q3.style.display='none';
+            q4.style.display='none';
+            q5.style.display='none';
+            q6.style.display='block';
+            q7.style.display='none';
+            document.title = "Вопрос №7";
+            SetPart(5, 1);
+        }
+        function ToTable(){
+            alert("Верно 🤗");
+            window.open("https://karasevv.com/hacaton/csenes/table.html");
+            window.close();
+        }
+        
+        function ToTask8(){
+            q0.style.display='none';
+            q1.style.display='none';
+            q2.style.display='none';
+            q3.style.display='none';
+            q4.style.display='none';
+            q5.style.display='none';
+            q6.style.display='none';
+            q7.style.display='block';
+            document.title = "Финал";
+        }
+        function ToMT(){
+            window.open("https://karasevv.com/hacaton/csenes/machine_tool.html");
+            window.close();
+        }
+        function Wrong(){
+            alert("Ошибочка 🤔");
+            _score = _score-5;
+            score.innerHTML="Оценка: "+_score;
+        }
+    </script>
+    <style>
+        body, html{
+            height: 100%;
+            width: 100%;
+            margin:0;
+            background-color: rgb(240,240,240);
+            font-family: 'Montserrat', sans-serif;
+        }
+        #score{
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            height: 65px;
+            line-height: 65px;
+            width: 200px;
+            background-color: rgba(200,0,0,0);
+            text-align: center;
+            font-size: 30px;
+        }
+        .screen{
+            position: relative;
+            top: 0%;
+            left: 0%;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(200,0,200,0);
+        }
+        .label{
+            position: relative;
+            margin: auto;
+            top: 20%;
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 150px;
+        }
+        .butt{
+            position: relative;
+            margin: auto;
+            height: 18%;
+            width:90%;
+            top: 40%;
+            color: rgba(255,255,255,1);
+            background-color: rgba(200,200,200,0.8);
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+        }
+        .quest{
+            position: relative;
+            top: 10%;
+            margin: auto;
+            width:90%;
+            background-color: rgba(255,255,255,1);
+            border-radius: 50px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding:5px;
+        }
+        .task{
+            position: relative;
+            margin: auto;
+            top: 0%;
+            font-size: 35px;
+            width:90%;
+            background-color: rgba(200,200,0,0);
+            word-wrap: break-word;
+        }
+        .quest_butt{
+            position: relative;
+            left: 5%;
+            margin-top: 2%;
+            height: 60px;
+            line-height: 60px;
+            width:90%;
+            color: rgba(255,255,255,1);
+            background-color: rgba(200,200,200,0.8);
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+        }
+        #q0{
+            display: block;
+        }
+        #q1{
+            display: none;
+        }
+        #q2{
+            display: none;
+        }
+        #q3{
+            display: none;
+        }
+        #q4{
+            display: none;
+        }
+        #q5{
+            display: none;
+        }
+        #q6{
+            display: none;
+        }
+    </style>
+    <body onload="OnLoad();">
+        <div class="screen">
+            <div id="score"></div>
+            <div class="quest" id="q0">
+                <div class="label">
+                    Расположение составных частей фрезерно-строгального станка Э7106-МФ4
+                </div>
+                <div class="quest_butt" onclick="ToTask1()">Начать</div>
+            </div>
+            <div class="quest" id="q1">
+                <div class="task">Часть станка, на котором монтируются основные узлы станка</div>
+                <div class="quest_butt" onclick="ToTask2();ToStand();">Станина</div>
+                <div class="quest_butt" onclick="Wrong()">Стол</div>
+                <div class="quest_butt" onclick="Wrong()">Направляющая</div>
+                <div class="quest_butt" onclick="Wrong()">Консоль</div>
+                <div class="quest_butt" onclick="Wrong()">Шпиндель</div>
+                <div class="quest_butt" onclick="Wrong()">Тиски</div>
+            </div>
+            <div class="quest" id="q2">
+                <div class="task">То, на чем установлены тиски для обрабатываемой детали</div>
+                <div class="quest_butt" onclick="Wrong()">Станина</div>
+                <div class="quest_butt" onclick="ToTask3();ToTable();">Стол</div>
+                <div class="quest_butt" onclick="Wrong()">Направляющая</div>
+                <div class="quest_butt" onclick="Wrong()">Консоль</div>
+                <div class="quest_butt" onclick="Wrong()">Шпиндель</div>
+                <div class="quest_butt" onclick="Wrong()">Тиски</div>
+            </div>
+            <div class="quest" id="q3">
+                <div class="task">Эта деталь изготавливается из чугуна методом литья. Устанавливается на вертикальных направляющих станины. В задачу консоли входит перемещение горизонтальных направляющих для салазок.</div>
+                <div class="quest_butt" onclick="Wrong()">Станина</div>
+                <div class="quest_butt" onclick="Wrong()">Стол</div>
+                <div class="quest_butt" onclick="ToTask4();ToDirect_x();">Направляющая</div>
+                <div class="quest_butt" onclick="Wrong()">Консоль</div>
+                <div class="quest_butt" onclick="Wrong()">Шпиндель</div>
+                <div class="quest_butt" onclick="Wrong()">Тиски</div>
+            </div>
+            <div class="quest" id="q4">
+                <div class="task">Деталь отливается из чугуна и устанавливается на вертикальные направляющие станины.</div>
+                <div class="quest_butt" onclick="Wrong()">Станина</div>
+                <div class="quest_butt" onclick="Wrong()">Стол</div>
+                <div class="quest_butt" onclick="Wrong()">Направляющая</div>
+                <div class="quest_butt" onclick="ToTask5();ToReceiver();">Консоль</div>
+                <div class="quest_butt" onclick="Wrong()">Шпиндель</div>
+                <div class="quest_butt" onclick="Wrong()">Тиски</div>
+            </div>
+            <div class="quest" id="q5">
+                <div class="task">Один из главных узлов. Он предназначен для крепления фрезы и передачи ей вращающего движения. Крутящий момент на вал шпинделя передается с коробки скоростей.</div>
+                <div class="quest_butt" onclick="Wrong()">Станина</div>
+                <div class="quest_butt" onclick="Wrong()">Стол</div>
+                <div class="quest_butt" onclick="Wrong()">Направляющая</div>
+                <div class="quest_butt" onclick="Wrong()">Консоль</div>
+                <div class="quest_butt" onclick="ToTask6();ToSpindle();">Шпиндель</div>
+                <div class="quest_butt" onclick="Wrong()">Тиски</div>
+            </div>
+            <div class="quest" id="q6">
+                <div class="task">Узел для крепления обрабатываемой детали</div>
+                <div class="quest_butt" onclick="Wrong()">Станина</div>
+                <div class="quest_butt" onclick="Wrong()">Стол</div>
+                <div class="quest_butt" onclick="Wrong()">Направляющая</div>
+                <div class="quest_butt" onclick="Wrong()">Консоль</div>
+                <div class="quest_butt" onclick="Wrong()">Шпиндель</div>
+                <div class="quest_butt" onclick="ToTask7();ToDetal();">Тиски</div>
+            </div>
+            <div class="quest" id="q7">
+                <div class="label">
+                    Тест пройден!
+                    теперь вы можете посмотреть станок целиком!
+                </div>
+                <div class="quest_butt" onclick="ToMT();">Станок</div>
+            </div>
+        </div>
+    </body>
+</html>

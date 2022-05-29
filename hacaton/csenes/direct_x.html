@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image.prod.js"></script>
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
+        <title>Направляющая</title>
+    </head>
+    <script>
+        function Back(){
+            window.open("https://karasevv.com/hacaton/index.html?a=3");
+            window.close();
+        }
+    </script>
+    <style>
+        .back_button{
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            height: 50px;
+            width: 50px;
+            background-color: rgba(200,0,200,1);
+            z-index:100;
+        }
+    </style>
+    <body>
+        <div class="back_button" onclick="Back();">back</div>
+        <a-scene mindar-image="imageTargetSrc: https://karasevv.com/hacaton/csenes/targets/direct_x.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+            <a-assets>
+                <a-asset-item id="m_t" src="https://karasevv.com/hacaton/csenes/models/direct_x.glb"></a-asset-item>
+            </a-assets>
+            <a-camera position="0 0 0" look-controls="enabled: true"></a-camera>
+            <a-entity mindar-image-target="targetIndex: 0">
+                <a-gltf-model rotation="90 0 0 " position="0 0 0.1" scale="1.5 1.5 1.5" src="#m_t">
+            </a-entity>
+        </a-scene>
+    </body>
+</html>
